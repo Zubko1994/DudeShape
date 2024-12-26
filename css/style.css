@@ -722,10 +722,7 @@ hr {
     .block img {
         display: none;
     }
-
-    /* .logo-footer__subtytle {
-     min-width: 200px;
-        } */
+}
 
 @media (max-width: 992px) {
 
@@ -751,9 +748,20 @@ hr {
 
     .block__title {
         text-align: center;
-        font-size: 35px;
+        font-size: 32px;
+        line-height: normal;
     }
 
+    .block__subtitle {
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+    .block__button {
+        margin-right: auto;
+        margin-left: auto;
+    }
     .main-info {
         margin-bottom: 50px;
     }
@@ -798,7 +806,6 @@ hr {
         max-height: 40px;
         max-width: 96px;
         margin-bottom: 25px;
-
     }
 
     .furniture-popular {
@@ -879,10 +886,6 @@ hr {
         font-size: 25px;
     }
 
-    .block__subtitle {
-        font-size: 20px;
-    }
-
     .block__description {
         padding: 120px 50px 50px 50px;
     }
@@ -925,10 +928,6 @@ hr {
         font-size: 13px;
     }
 
-    /* .register__wrapper {
-        padding: 25px 50px;
-    } */
-
     .register {
         padding: 10px 20px;
         font-family: DMSans;
@@ -951,6 +950,4 @@ hr {
         top: 22px;
         left: 8px;
     }
-
-
 }
