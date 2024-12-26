@@ -142,12 +142,14 @@ body {
 }
 
 .block__title {
-    text-align: center;
+    text-align: left;
     font-family: Montserrat;
     font-weight: 700;
     font-size: 56px;
     margin-bottom: 20px;
     color: #ffffff;
+    max-width: 671px;
+    line-height: 68.26px;
 }
 
 .block__subtitle {
@@ -155,9 +157,10 @@ body {
     font-weight: 400;
     font-size: 20px;
     line-height: 25px;
-    text-align: center;
+    text-align: left;
     color: #ffffff;
     margin-bottom: 35px;
+    max-width: 488px;
 }
 
 .block__button {
@@ -168,7 +171,8 @@ body {
     line-height: 25px;
     color: #154444;
     display: block;
-    margin: 0 auto;
+    max-width: 172px;
+    max-height: 56px;
 }
 
 .block__button:hover {
@@ -282,9 +286,11 @@ body {
     /* display: flex;
     flex-wrap: wrap;
     justify-content: center; */
-    gap: 30px;
+    gap: 30px;    
+}
+
+.card {
     box-shadow: 0px 13px 26px 0px #00000012;
-    
 }
 
 .card img {
@@ -368,7 +374,8 @@ body {
     font-size: 24px;
     line-height: 27px;
     color: #919090;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    position: relative;
 }
 
 .furniture-all__list>li:active {
@@ -382,8 +389,8 @@ body {
     height: 5px;
     background: #154444;
     border-radius: 10px;
-    position: relative;
-    top: 15px;
+    position: absolute;
+    top: 28px;
     left: 55px;
 }
 
@@ -393,18 +400,15 @@ body {
 
 .furniture-all__choice {
     display: flex;
-    gap: 147px;
-    justify-content: center;
+    gap: 20px;
+    justify-content: space-between;
 }
 
 .choice {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 33px 30px;
-    grid-auto-rows: 90px;
-    align-items: center;
-    justify-content: center;
-    align-content: center;
+    flex: 0 1 474px;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 34px 30px;
 }
 
 .choice__room {
@@ -416,11 +420,15 @@ body {
 }
 
 .choice__room {
-    border: 1.5px solid #D9DCE5;
-    padding: 15px 50px;
-    flex-basis: calc(100% / 2);
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    border: 2px solid #D9DCE5;
+    padding: 16px;
     cursor: pointer;
+    transition: all .3s linear;
+    max-height: 90px;
 }
 
 .choice__room:hover {
@@ -433,7 +441,8 @@ body {
 }
 
 .choice__room svg {
-    margin-bottom: 13px;
+    min-height: 24px;
+    max-width: 24px;
 }
 
 .actives {
@@ -476,6 +485,11 @@ body {
     margin-bottom: 140px;
 }
 
+.reviews__img {
+    width: 100%;
+    height: 100%;
+}
+
 .register__title {
     font-family: Montserrat;
     font-weight: 700;
@@ -498,7 +512,7 @@ body {
 
 .register__wrapper {
     background: #f4f6f6;
-    padding: 68px 297px;
+    padding: 68px 15px 55px;
 }
 
 
@@ -527,6 +541,8 @@ body {
     max-width: 471px;
     min-width: 315px;
     width: 100%;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .field-email {
@@ -535,7 +551,7 @@ body {
     background: #ffffff;
     display: flex;
     flex: 1 1 315px;
-    margin: 0 auto;
+    text-align: center;
 }
 
 .field-email img {
@@ -564,7 +580,6 @@ body {
 .footer {
     background: #305F64;
     color: #ffffff;
-    padding: 100px 0px 20px 0px;
 }
 
 .footer a {
@@ -572,11 +587,16 @@ body {
 }
 
 .footer__wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(190px, 200px));
-    gap: 33px 30px;
+    display: flex;
+    gap: 30px;
+    padding: 100px 0 40px;
+    flex-wrap: wrap;
     justify-content: space-between;
+}
 
+.footer__info {
+    flex: 0 1 358px;
+    padding-right: 50px;
 }
 
 .logo-footer {
@@ -593,7 +613,6 @@ body {
     line-height: 26px;
     margin-top: 24px;
     margin-bottom: 40px;
-    min-width: 308px;
 }
 
 .menu-bottom {
@@ -631,6 +650,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 16px;
+}
+
+.Subscribe {
+    flex: 0 1 253px;
 }
 
 .Subscribe__title {
@@ -700,6 +723,10 @@ hr {
         display: none;
     }
 
+    /* .logo-footer__subtytle {
+     min-width: 200px;
+        } */
+
 @media (max-width: 992px) {
 
     .container {
@@ -715,7 +742,7 @@ hr {
     }
 
     .header__wrapper nav {
-        visibility: hidden;
+        display: none;
     }
 
     .menu__icon {
@@ -789,11 +816,12 @@ hr {
 
     .furniture-all__img {
         width: 100%;
+        height: 100%;
     }
 
     .choice {
-        grid-template-columns: 50%;
-        gap: 33px 30px;
+        flex: initial;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr))
     }
 
     .reviews__wrapper {
@@ -810,10 +838,6 @@ hr {
         text-align: center;
     }
 
-    .logo-footer__subtytle {
-        min-width: 200px;
-    }
-
     .reviews {
         margin-bottom: 50px;
     }
@@ -822,9 +846,9 @@ hr {
         justify-content: center;
     }
 
-    .register__wrapper {
+    /* .register__wrapper {
         padding: 28px 150px;
-    }
+    } */
 
     .register-field {
         margin-bottom: 50px;
@@ -833,6 +857,16 @@ hr {
     .furniture-all__list {
         flex-wrap: wrap;
         gap: 40px;
+    }
+
+    .footer__wrapper {
+        padding: 40px 0;
+        gap: 50px;
+    }
+
+    .footer__item {
+        flex: 1 1 auto;
+        padding-right: 0px;
     }
 }
 
@@ -891,9 +925,9 @@ hr {
         font-size: 13px;
     }
 
-    .register__wrapper {
+    /* .register__wrapper {
         padding: 25px 50px;
-    }
+    } */
 
     .register {
         padding: 10px 20px;
@@ -905,6 +939,7 @@ hr {
 
     .furniture-all__item {
         margin-bottom: 0;
+        position: relative;
     }
 
     .field-email {
