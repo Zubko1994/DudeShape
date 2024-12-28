@@ -61,32 +61,38 @@ body {
     transform: scaleX(1.3);
 }
 
-#menu__togle {
+/*бургер*/
+
+#bgr {
     opacity: 0;
 }
 
 .burger {
+    display: flex;
+    align-items: center;
+    position: fixed;
     width: 24px;
     height: 24px;
     position: relative;
     cursor: pointer;
+    z-index: 1;
     background: none;
 }
 
 .burger span {
     width: 100%;
-    display: block;
-    height: 2px;
-    background: #244D4D;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    transition: all .3s linear;
+        display: block;
+        height: 2px;
+        background: #244D4D;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        transition: all .3s linear;
 }
 
-.burger::after,
-.burger::before {
+.burger > span::after,
+.burger > span::before {
     position: absolute;
     content: '';
     display: block;
@@ -96,14 +102,15 @@ body {
     transition: all .3s linear;
 }
 
-.burger::after {
-    left: 0;
-    bottom: 0;
+.burger > span::after {
+    content: '';
+    top: 8px;
+        right: 0px;
 }
 
-.burger::before {
-    right: 0;
-    top: 0;
+.burger span::before {
+    content: '';
+    top: -8px;
 }
 
 .burger-active span {
@@ -125,6 +132,24 @@ body {
     transform: translateY(-50%) translateX(-50%) rotate(-45deg);
     transition: all .3s linear;
 }
+
+.menu__bgr {
+    display: block;
+    position: fixed;
+    visibility: hidden;
+    top: 0;
+    left: 100%;
+    width: 320px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    text-align: center;
+    background-color: #ECEFF1;
+    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+}
+
+
 
 .header {
     margin-bottom: 27px;
@@ -766,11 +791,37 @@ hr {
         display: none;
     }
 
+    #bgr:checked ~ .burger span {
+        transform: rotate(45deg);
+    }
+    
+    #bgr:checked ~ .burger span::before {
+        height: 0px;
+    }
+    
+    #bgr:checked ~ .burger span::after {
+        top: 0;
+        width: 100%;
+        transform: rotate(90deg);
+    }
+
+    #bgr:checked ~ .menu__bgr {
+            visibility: visible;
+            left: 0;
+            height: 100%;
+            background: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+    .header__wrapper nav {
+            display: block;
+            height: 100%;
+    }
+
     .menu {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 100%;
+        display: none;
     }
 
     .menu__icon {
