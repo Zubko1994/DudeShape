@@ -1,0 +1,116 @@
+.register__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 48px;
+    color: #222222;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.register__subtitle {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #222222;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.register__wrapper {
+    background: #f4f6f6;
+    padding: 68px 15px 55px;
+}
+
+.register {
+    background: #305f64;
+    padding: 15px 31px;
+    font-family: DMSans;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-left: auto;
+}
+
+.register:hover {
+    background: #42848a;
+}
+
+.register__wrap {
+    padding: 7px;
+}
+
+.get-message {
+    display: flex;
+    flex: 1 1 300px;
+    max-width: 471px;
+    min-width: 315px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.field-email {
+    padding: 7px 17px 7px 30px;
+    position: relative;
+    background: #ffffff;
+    display: flex;
+    flex: 1 1 315px;
+    text-align: center;
+}
+
+.field-email img {
+    position: absolute;
+    top: 30px;
+    left: 8px;
+}
+
+#email {
+    width: 100%;
+    height: 100%;
+}
+
+::placeholder {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    color: #bababa;
+}
+
+.register-field {
+    margin-bottom: 140px;
+}
+
+@media (max-width: 992px) {
+    .field-email {
+        padding: 5px 15px 5px 27px;
+    }
+    .register-field {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 576px) {
+    .register {
+        padding: 10px 20px;
+        font-family: DMSans;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 18px;
+    }
+}
+
+@media (max-width: 576px) {
+    .field-email {
+        flex: 1 1 200px;
+    }
+
+    .field-email img {
+        position: absolute;
+        top: 22px;
+        left: 8px;
+    }
+}

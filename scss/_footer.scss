@@ -1,0 +1,152 @@
+.footer {
+    background: #305F64;
+    color: #ffffff;
+}
+
+.footer a {
+    color: #ffffff;
+}
+
+.footer__wrapper {
+    display: flex;
+    gap: 30px;
+    padding: 100px 0 40px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer__info {
+    flex: 0 1 358px;
+    padding-right: 50px;
+}
+
+.logo-footer {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29.26px;
+}
+
+.logo-footer__subtytle {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 24px;
+    margin-bottom: 40px;
+}
+
+.menu-bottom {
+    padding: 0 10px;
+}
+
+.connect {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 20px;
+}
+
+.connect__cite {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.connect__cite>img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.menu-bottom__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 24px;
+}
+
+.menu-bottom__list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.Subscribe {
+    flex: 0 1 253px;
+}
+
+.Subscribe__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24.38px;
+    margin-bottom: 23px;
+}
+
+.Subscribe__subtitle {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23px;
+    margin-bottom: 40px;
+}
+
+.Subscribe__wrapper {
+    max-width: 253px;
+    max-height: 48px;
+    padding: 11px 12px 9px 22px;
+    background: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex: 1 1 200px;
+    width: 100%;
+}
+
+.subscribe__email {
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe__img {
+    width: 28px;
+    height: 28px;
+}
+
+
+
+.Subscribe__form>button>img:hover {
+    transform: scale(1.1);
+}
+
+
+hr {
+    border: 1px solid #bfd1d3;
+    margin-bottom: 20px;
+}
+
+.copyright {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 23.44px;
+    text-align: center;
+}
+
+.menu-bottom__list-item a:hover {
+    color: #917c7c;
+}
+
+@media (max-width: 992px) {
+    .footer__wrapper {
+        padding: 40px 0;
+        gap: 50px;
+    }
+
+    .footer__item {
+        flex: 1 1 auto;
+        padding-right: 0px;
+    }
+}

@@ -1,0 +1,65 @@
+.info__wrapper {
+    display: flex;
+    gap: 100px;
+    margin-bottom: 140px;
+}
+
+.info__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 40px;
+    color: #244D4D;
+    margin-bottom: 20px;
+}
+
+.info__subtitle {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 40px;
+}
+
+.advantages__quality {
+    display: flex;
+    gap: 45px;
+    margin-bottom: 30px;
+}
+
+.advantages__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 26px;
+    color: #244D4D;
+    margin-bottom: 14px;
+}
+
+.advantages__subtitle {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+@media (max-width: 992px) {
+    .info__title {
+        text-align: center;
+    }
+
+    .info__subtitle {
+        text-align: center;
+    }
+
+    .info__img {
+        width: 100%;
+    }
+
+    .info__wrapper {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .advantages__quality {
+        justify-content: center;
+    }
+}

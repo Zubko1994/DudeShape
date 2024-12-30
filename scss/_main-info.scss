@@ -1,0 +1,141 @@
+.block {
+    display: flex;
+    max-width: 100%;
+}
+
+.block img {
+    max-width: 411px;
+    max-height: 560px;
+}
+
+.block__description {
+    background: #154444;
+    padding: 100px;
+}
+
+.block__title {
+    text-align: left;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 56px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    max-width: 671px;
+    line-height: 68.26px;
+}
+
+.block__subtitle {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    text-align: left;
+    color: #ffffff;
+    margin-bottom: 35px;
+    max-width: 488px;
+}
+
+.block__button {
+    padding: 15px 25px;
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #154444;
+    display: block;
+    max-width: 172px;
+    max-height: 56px;
+}
+
+.block__button:hover {
+    background: #c9ebeb;
+}
+
+
+.main-info {
+    margin-bottom: 100px;
+}
+
+@media (max-width: 1212px) {
+    .block img {
+        display: none;
+    }
+
+    .block__description {
+        width: 100%;
+    }
+
+    .block__title {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .block__subtitle {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .block__button {
+        text-align: center;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media (max-width: 992px) {
+
+    .block__title {
+        text-align: center;
+        font-size: 32px;
+        line-height: normal;
+    }
+
+    .block__subtitle {
+        font-size: 16px;
+        text-align: center;
+
+    }
+
+    .block__button {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .main-info {
+        margin-bottom: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .block__title {
+        font-size: 25px;
+    }
+
+    .block__description {
+        padding: 120px 50px 50px 50px;
+    }
+
+    .block__button {
+        padding: 10px 15px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 576px) {
+    .block__title {
+        font-size: 23px;
+    }
+
+    .block__subtitle {
+        font-size: 17px;
+    }
+
+    .block__description {
+        padding: 50px 20px 20px 20px;
+    }
+
+    .block__button {
+        padding: 8px 10px;
+        font-size: 13px;
+    }
+}

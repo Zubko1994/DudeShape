@@ -1,0 +1,120 @@
+.furniture-popular {
+    margin-bottom: 140px;
+}
+
+.furniture-popular__wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 80px;
+}
+
+.furniture-popular__title {
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 52px;
+    color: #242424;
+    margin-bottom: 20px;
+}
+
+.furniture-popular__subtitle {
+    font-family: DMSans;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    color: #383738;
+    /* margin-bottom: 80px; */
+    max-width: 819px;
+}
+
+.furniture-popular__button {
+    background: none;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: center; */
+    gap: 30px;
+}
+
+.card {
+    box-shadow: 0px 13px 26px 0px #00000012;
+}
+
+.card img {
+    width: 100%;
+}
+
+.cards__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 24px;
+}
+
+.cards__title {
+    font-family: DMSans;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 27px;
+    color: #242424;
+}
+
+.cards__icon {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: end;
+    justify-content: flex-end;
+    cursor: pointer;
+}
+
+.cards__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: baseline;
+}
+
+.cards__count {
+    font-family: DMSans;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+    color: #154444;
+}
+
+.cards__button {
+    background: #244d4d;
+    font-family: DMSans;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 21px;
+    color: #ffffff;
+    padding: 5px 14px;
+}
+
+.cards__button:hover {
+    background: #568888;
+}
+
+@media (max-width: 992px) {
+    .furniture-popular__title {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    .furniture-popular__button {
+        max-height: 40px;
+        max-width: 96px;
+        margin-bottom: 25px;
+    }
+
+    .furniture-popular {
+        margin-bottom: 50px;
+    }
+}
